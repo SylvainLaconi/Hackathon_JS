@@ -1,7 +1,7 @@
 import React from "react";
 import { Footer } from "../Footer";
 
-export const TrialCreation = () => {
+const TrialCreation = () => {
   return (
     <>
       <div className="TrialCreation">
@@ -11,3 +11,5 @@ export const TrialCreation = () => {
     </>
   );
 };
+
+export default TrialCreation;

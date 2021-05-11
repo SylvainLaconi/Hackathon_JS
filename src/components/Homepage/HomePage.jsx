@@ -1,12 +1,11 @@
 import React from "react";
 
-export const HomePage = () => {
+const HomePage = () => {
+  return (
+    <div className="HomePage">
+      <h1>Welcome on the HomePage !</h1>
+    </div>
+  );
+};
 
-    return (
-        <div className="HomePage">
-            <h1>
-                Welcome on the HomePage !
-            </h1>
-        </div>
-    )
-}
+export default HomePage;
