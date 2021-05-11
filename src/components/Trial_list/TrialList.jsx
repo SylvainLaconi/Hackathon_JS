@@ -1,16 +1,17 @@
 import React from "react";
 import { Header } from "../Header"
 import { Footer } from "../Footer"
+import "./TrialList.css"
+import TrialCard from "./TrialCard"
 
-export const TrialList = () => {
+export default function TrialList(){
 
     return (
         <>
             <Header />
             <div className="TrialList">
-                <h1>
-                    Welcome on the TrialList !
-                </h1>
+                <TrialCard />
+                <TrialCard />
             </div>
             <Footer />
         </>
