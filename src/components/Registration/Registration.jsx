@@ -18,7 +18,7 @@ const Registration = () => {
         species: species,
         planet: planet,
         photo: photo,
-        playerDescription: playerDescription,
+        player_description: playerDescription,
         team: team,
         games_idgames: game,
       })

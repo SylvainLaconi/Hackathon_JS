@@ -1,18 +1,21 @@
 import React from "react";
 import styles from "./TrialCard.module.sass"
+import { Link } from "react-router-dom";
 
-export default function TrialCard({title, place, image, description}) {
+export default function TrialCard({ title, place, image, description, id }) {
 
     return (
         <div className={styles.wrapper}>
             <div className={styles.card}>
-                <img src={image}/>
-                    <div className={styles.info}>
-                        <h1>{title}</h1>
-                        <h3>{place}</h3>
-                        <p>{description}</p>
+                <img src={image} />
+                <div className={styles.info}>
+                    <h1>{title}</h1>
+                    <h3>{place}</h3>
+                    <p>{description}</p>
+                    <Link to={`/trialdetail/${id}`}>
                         <button>Interested?</button>
-                    </div>
+                    </Link>
+                </div>
             </div>
         </div>
     )

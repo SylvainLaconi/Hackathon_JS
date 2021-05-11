@@ -57,7 +57,7 @@ const TrialDetail = () => {
         <div className={styles.TrialDetail}>
           <div className={styles.wrapper}>
             {playerList
-              .filter((player) => player.team === "team wild")
+              .filter((player) => player.team === "Wild")
               .map((TeamWild) => (
                 <>
                   <PlayerCard
