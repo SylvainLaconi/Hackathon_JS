@@ -1,0 +1,87 @@
+.registration_background {
+	background: url("/src/assets/mars_registration.jpg") no-repeat center center;
+    width: 100%;
+    height: 100vh;
+}
+
+ .regisSignupSection {
+	 background-repeat: no-repeat;
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 margin-top: 4%;
+	 width: 40%;
+	 height: 80%;
+	text-align: center;
+	 display: flex;
+	 color: white;
+	 box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, .5);
+}
+
+ .regisSignupForm {
+	 width: 100%;
+	 padding: 30px 0;
+	 background: rgba(223, 176, 146, .5); 
+	 /* background: rgba(180, 118, 85, .6); */
+	 transition: 0.2s;
+}
+ .regisTitle {
+	 font-weight: 300;
+}
+ .regisInputFields {
+	 margin: 15px 0;
+	 font-size: 16px;
+	 padding: 10px;
+	 width: 250px;
+	 border: 1px solid rgba(98, 48, 35, 1);
+	 border-top: none;
+	 border-left: none;
+	 border-right: none;
+	 background: rgba(20, 20, 20, .25);
+	 color: white;
+	 outline: none;
+}
+
+.regisInputFields::placeholder{
+    color: white;
+}
+
+.regisNoBullet {
+	 list-style-type: none;
+	 padding: 0;
+}
+
+/* bouton radio */
+.registrationTeam{
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin-top: 10px;
+}
+.regisRadio{
+	margin-left: 10%;
+	margin-right: 10%;
+
+}
+
+.registrationRadio{
+	vertical-align: center;
+}
+
+
+/* bouton */
+ #regisJoinButton {
+	 border: 1px solid rgba(98, 48, 35, 1);
+	 background: rgba(20, 20, 20, .6);
+	 font-size: 18px;
+	 color: white;
+	 margin-top: 20px;
+	 padding: 10px 50px;
+	 cursor: pointer;
+	 transition: 0.4s;
+}
+ #regisJoinButton:hover {
+	 background: rgba(20, 20, 20, .8);
+	 padding: 10px 80px;
+}
