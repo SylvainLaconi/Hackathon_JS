@@ -8,7 +8,7 @@ const Registration = () => {
     <>
       <div className="registration_background">
         <div className="regisSignupSection">
-          <form action="#" method="POST" className="regisSignupForm" name="signupform">
+          <form action="#" className="regisSignupForm" name="signupform">
             <h2 className="regisTitle">Sign Up</h2>
             <ul className="regisNoBullet">
               <li>
