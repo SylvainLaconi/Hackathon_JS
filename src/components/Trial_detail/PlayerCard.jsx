@@ -6,7 +6,7 @@ const PlayerCard = ({ name, image, planet, species, playerDescription }) => {
     <div className={styles.contactList}>
       <div class={styles.row}>
         <div className={styles.col}>
-          <img src={image}></img>
+          <img className={styles.imgplayer} src={image}></img>
           <h4 className={styles.bold}>{name}</h4>
           <p>{planet}</p>
           <p>{species}</p> <p>{playerDescription}</p>
