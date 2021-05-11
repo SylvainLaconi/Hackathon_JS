@@ -5,6 +5,7 @@ import TrialList from "./components/Trial_list/TrialList";
 import TrialCreation from "./components/Trial_creation/TrialCreation";
 import TrialDetail from "./components/Trial_detail/TrialDetail";
 import Registration from "./components/Registration/Registration";
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="/registration" component={Registration} />
         </Switch>
       </Router>
+      <Footer />
     </div>
   );
 }
