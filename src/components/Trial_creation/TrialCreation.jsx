@@ -2,7 +2,7 @@ import React from "react";
 import { Footer } from "../Footer";
 import "./trialCreation.css"
 
-export const TrialCreation = () => {
+const TrialCreation = () => {
   return (
 <>
     <div className="creation_background"> 
@@ -76,3 +76,5 @@ export const TrialCreation = () => {
 </>
   );
 };
+
+export default TrialCreation;

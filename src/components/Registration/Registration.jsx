@@ -1,8 +1,9 @@
 import React from "react";
-import { Footer } from "../Footer"
-import "./registration.css"
+import { Footer } from "../Footer";
+import "./registration.css";
 
-export const Registration = () => {
+const Registration = () => {
+
 
     return (
 <>
@@ -79,7 +80,8 @@ export const Registration = () => {
                 <option value="trial4">Trial 4</option>
             </select>
           </li>
-        <div className="registrationTeam" required>
+        
+          <div className="registrationTeam" required>
             <li className="regisRadio">
                 <input className="registrationRadio" type="radio" id="playerTeam" name="playerTeam" value="mars"required/>
                 <label for="playerTeam">Mars</label>
@@ -89,23 +91,15 @@ export const Registration = () => {
                 <input type="radio" className="registrationRadio" id="playerTeam" name="playerTeam" value="wild" required/>
                 <label for="playerTeam">Wild</label>
             </li>
-        </div>
-
-
-          <li id="center-btn">
-            <input
-              type="submit"
-              id="regisJoinButton"
-              name="join"
-              alt="Join"
-              value="Join"
-            />
-          </li>
+          
+          </div>
         </ul>
-      </form>
-    </div>
-  </div>
- <Footer />
-</>
-    )
-}
+        </form>
+        </div>
+        </div>
+      <Footer />
+    </>
+  );
+};
+
+export default Registration;
