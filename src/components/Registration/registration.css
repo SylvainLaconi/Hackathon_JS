@@ -53,21 +53,10 @@
 }
 
 /* bouton radio */
-.registrationTeam{
-display: flex;
-flex-direction: row;
-justify-content: center;
+.regisTeam{
 margin-top: 10px;
 }
-.regisRadio{
-	margin-left: 10%;
-	margin-right: 10%;
 
-}
-
-.registrationRadio{
-	vertical-align: center;
-}
 
 
 /* bouton */
