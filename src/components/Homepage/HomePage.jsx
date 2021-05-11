@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 
 
-export function HomePage() {
+const HomePage = () => {
 
     return (
         <>
@@ -35,3 +35,8 @@ export function HomePage() {
         </>
     )
 }
+
+export default HomePage;
+
+
+

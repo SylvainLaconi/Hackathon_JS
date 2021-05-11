@@ -1,11 +1,11 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import { HomePage } from "./components/Homepage/HomePage";
-import { TrialList } from "./components/Trial_list/TrialList";
-import { TrialCreation } from "./components/Trial_creation/TrialCreation";
-import { TrialDetail } from "./components/Trial_detail/TrialDetail";
-import { Registration } from "./components/Registration/Registration";
-import { Footer } from './components/Footer';
+import HomePage from "./components/Homepage/HomePage";
+import TrialList from "./components/Trial_list/TrialList";
+import TrialCreation from "./components/Trial_creation/TrialCreation";
+import TrialDetail from "./components/Trial_detail/TrialDetail";
+import Registration from "./components/Registration/Registration";
+import Footer from './components/Footer';
 
 function App() {
   return (
