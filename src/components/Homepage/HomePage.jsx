@@ -2,9 +2,6 @@ import './HomePage.css'
 import { Link } from 'react-router-dom'
 import { GiRobotAntennas } from 'react-icons/gi'
 
-
-
-
 const HomePage = () => {
 
     return (
@@ -14,11 +11,11 @@ const HomePage = () => {
                 <h1 className='tracking-in-expand'>Mars VS Wild</h1>
             </div>
             <div className='tracking'>
-            <h2 id='home-description'>Two teams, only one will succeed.<br />Their goal? Face one another in battles and become the ultimate winner.<br/> Who will it be?</h2>
+            <h2 id='home-description'>Two teams, only one will succeed.<br />Their goal? Face one another in battles and become the ultimate winner.<br/> Who will it be ?</h2>
             </div>
             <div className='start-btn'>
             <Link to='/trialcreation'>
-                <button className='play-btn'><GiRobotAntennas /></button>
+                <button className='bounce-in-top' id='play-btn'><GiRobotAntennas /></button>
             </Link>
             </div>
             <div id="background-wrap">
