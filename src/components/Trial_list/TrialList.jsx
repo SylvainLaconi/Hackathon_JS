@@ -8,20 +8,11 @@ export default function TrialList(){
     const [trials, setTrials] = useState([])
     const [loading, setLoading] = useState(true)
 
-/*useEffect(() => {
-    axios
-        .get("https://rickandmortyapi.com/api/character")
-        .then((res) => setCharacters(res.data))
-        .catch((err) => {
-            console.log(err.response)
-        })
-}, [])*/
-
 useEffect(() => {
     const getTrials = async () => {
         try {
-            const trials = await axios.get("/api/games")
-            setTrials(trials.data)    
+            const trialsList = await axios.get("/api/games")
+            setTrials(trialsList.data)    
         } catch (err) {
             console.log(err)
         }  finally {
