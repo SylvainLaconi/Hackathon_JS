@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Header } from "../Header"
 import { Footer } from "../Footer"
 import { PlayerCard } from "./PlayerCard.jsx"
 import styles from './trialdetail.module.css';

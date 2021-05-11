@@ -1,5 +1,4 @@
 import React from "react";
-import { Header } from "../Header"
 import { Footer } from "../Footer"
 import "./registration.css"
 
@@ -7,11 +6,10 @@ export const Registration = () => {
 
     return (
 <>
-  <Header />
     <div className="registration_background"> 
     <div className="regisSignupSection">
       <form action="#" method="POST" className="regisSignupForm" name="signupform">
-        <h2>Sign Up</h2>
+        <h2 className="regisTitle">Sign Up</h2>
         <ul className="regisNoBullet">
           <li>
             <label for="player"></label>
@@ -82,12 +80,12 @@ export const Registration = () => {
             </select>
           </li>
         <div className="registrationTeam" required>
-            <li>
+            <li className="regisRadio">
                 <input className="registrationRadio" type="radio" id="playerTeam" name="playerTeam" value="mars"required/>
                 <label for="playerTeam">Mars</label>
 
             </li>
-            <li>
+            <li className="regisRadio">
                 <input type="radio" className="registrationRadio" id="playerTeam" name="playerTeam" value="wild" required/>
                 <label for="playerTeam">Wild</label>
             </li>
