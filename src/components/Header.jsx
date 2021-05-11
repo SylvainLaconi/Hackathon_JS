@@ -1,12 +1,25 @@
 import React from "react";
+import { BrowserRouter as Link } from "react-router-dom";
+import "./Header.css";
 
-export const Header = () => {
+const Header = () => {
+  return (
+    <div className="header-ctn">
+      <nav>
+        <ul className="menu-ctn">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/triallist">Our trials</Link>
+          </li>
+          <li>
+            <Link to="/registration">Register</Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
+};
 
-    return (
-        <div className="Header">
-            <h1>
-                Header here !!!!
-            </h1>
-        </div>
-    )
-}
+export default Header;
