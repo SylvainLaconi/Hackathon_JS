@@ -4,6 +4,7 @@
   justify-content: flex-end;
   align-items: center;
   background-color: var(--black);
+  color: var(--yellow);
   height: 2rem;
 }
 
@@ -12,6 +13,7 @@
   height: 100%;
   display: flex;
   justify-content: space-around;
+  text-decoration: none;
   list-style: none;
 }
 
@@ -22,12 +24,7 @@
   text-align: center;
 }
 
-.menu-ctn a {
-  color: var(--yellow);
-  text-decoration: none;
-}
-
-.menu-ctn a:hover {
-  cursor: pointer;
+.menu-ctn li:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
