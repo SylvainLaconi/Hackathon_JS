@@ -1,11 +1,12 @@
 .TrialList {
-    background: url("../../assets/images/arene.jpg") no-repeat center center;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap ;
+  background: url("../../assets/images/arene.jpg") no-repeat center center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
 }
 
 /*@media (min-width: 1200px) {
