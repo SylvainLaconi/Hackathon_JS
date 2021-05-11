@@ -1,15 +1,16 @@
 import React from "react";
-import { Footer } from "../Footer"
-import "./registration.css"
+import { Footer } from "../Footer";
+import "./registration.css";
 
-export const Registration = () => {
+const Registration = () => {
+
 
     return (
 <>
     <div className="registration_background"> 
     <div className="regisSignupSection">
       <form action="#" method="POST" className="regisSignupForm" name="signupform">
-        <h2>Sign Up</h2>
+        <h2 className="regisTitle">Sign Up</h2>
         <ul className="regisNoBullet">
           <li>
             <label for="player"></label>
@@ -70,8 +71,8 @@ export const Registration = () => {
             />
           </li>
           <li>
-            <label for="picture"></label>
-            <select name="circuit" id="circuit-select" required>
+            <label for="registerTrial"></label>
+            <select name="registerTrial" id="registerTrial" required>
                 <option value="">--</option>
                 <option value="trial1">Trial 1</option>
                 <option value="trial2">Trial 2</option>
@@ -79,33 +80,31 @@ export const Registration = () => {
                 <option value="trial4">Trial 4</option>
             </select>
           </li>
-        <div className="registrationTeam" required>
-            <li>
-                <input className="registrationRadio" type="radio" id="playerTeam" name="playerTeam" value="mars"required/>
-                <label for="playerTeam">Mars</label>
-
-            </li>
-            <li>
-                <input type="radio" className="registrationRadio" id="playerTeam" name="playerTeam" value="wild" required/>
-                <label for="playerTeam">Wild</label>
-            </li>
-        </div>
-
-
-          <li id="center-btn">
+        
+          <li>
+            <label for="registerTeam"></label>
+            <select className="regisTeam" name="registerTeam" id="registerTeam" required>
+                <option value="">--</option>
+                <option value="Mars">Mars</option>
+                <option value="Wild">Wild</option>
+            </select>
+          </li>
+          <li id="registerButton">
             <input
               type="submit"
               id="regisJoinButton"
-              name="join"
-              alt="Join"
+              name="joinTrial"
+              alt="joinTrial"
               value="Join"
             />
           </li>
         </ul>
-      </form>
-    </div>
-  </div>
- <Footer />
-</>
-    )
-}
+        </form>
+        </div>
+        </div>
+      <Footer />
+    </>
+  );
+};
+
+export default Registration;
