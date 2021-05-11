@@ -71,8 +71,8 @@ const Registration = () => {
             />
           </li>
           <li>
-            <label for="picture"></label>
-            <select name="circuit" id="circuit-select" required>
+            <label for="registerTrial"></label>
+            <select name="registerTrial" id="registerTrial" required>
                 <option value="">--</option>
                 <option value="trial1">Trial 1</option>
                 <option value="trial2">Trial 2</option>
@@ -81,18 +81,23 @@ const Registration = () => {
             </select>
           </li>
         
-          <div className="registrationTeam" required>
-            <li className="regisRadio">
-                <input className="registrationRadio" type="radio" id="playerTeam" name="playerTeam" value="mars"required/>
-                <label for="playerTeam">Mars</label>
-
-            </li>
-            <li className="regisRadio">
-                <input type="radio" className="registrationRadio" id="playerTeam" name="playerTeam" value="wild" required/>
-                <label for="playerTeam">Wild</label>
-            </li>
-          
-          </div>
+          <li>
+            <label for="registerTeam"></label>
+            <select className="regisTeam" name="registerTeam" id="registerTeam" required>
+                <option value="">--</option>
+                <option value="Mars">Mars</option>
+                <option value="Wild">Wild</option>
+            </select>
+          </li>
+          <li id="registerButton">
+            <input
+              type="submit"
+              id="regisJoinButton"
+              name="joinTrial"
+              alt="joinTrial"
+              value="Join"
+            />
+          </li>
         </ul>
         </form>
         </div>
