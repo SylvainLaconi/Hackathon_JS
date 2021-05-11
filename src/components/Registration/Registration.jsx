@@ -34,10 +34,10 @@ const Registration = () => {
             name="signupform"
             onSubmit={postPlayer}
           >
-            <h2>Sign Up</h2>
+            <h2>Join a trial</h2>
             <ul className="regisNoBullet">
               <li>
-                <label for="player"></label>
+                <label htmlfor="player"></label>
                 <input
                   type="text"
                   className="regisInputFields"
@@ -50,7 +50,7 @@ const Registration = () => {
                 />
               </li>
               <li>
-                <label for="species"></label>
+                <label htmlfor="species"></label>
                 <input
                   type="text"
                   className="regisInputFields"
@@ -63,7 +63,7 @@ const Registration = () => {
                 />
               </li>
               <li>
-                <label for="planet"></label>
+                <label htmlfor="planet"></label>
                 <input
                   type="text"
                   className="regisInputFields"
@@ -76,7 +76,7 @@ const Registration = () => {
                 />
               </li>
               <li>
-                <label for="picture"></label>
+                <label htmlfor="picture"></label>
                 <input
                   type="text"
                   className="regisInputFields"
@@ -89,7 +89,7 @@ const Registration = () => {
                 />
               </li>
               <li>
-                <label for="description"></label>
+                <label htmlfor="description"></label>
                 <textarea
                   type="text"
                   className="regisInputFields"
@@ -105,7 +105,7 @@ const Registration = () => {
                 />
               </li>
               <li>
-                <label for="picture"></label>
+                <label htmlfor="picture"></label>
                 <select
                   name="circuit"
                   id="circuit-select"
@@ -113,7 +113,7 @@ const Registration = () => {
                   onChange={(e) => setGame(e.target.value)}
                   required
                 >
-                  <option value="">--</option>
+                  <option value="" disabled selected>Choose a trial</option>
                   <option value="1">Trial 1</option>
                   <option value="2">Trial 2</option>
                   <option value="3">Trial 3</option>
@@ -124,7 +124,7 @@ const Registration = () => {
                 </select>
               </li>
               <li>
-                <label for="registerTeam"></label>
+                <label htmlfor="registerTeam"></label>
                 <select
                   className="regisTeam"
                   name="registerTeam"
@@ -133,7 +133,7 @@ const Registration = () => {
                   onChange={(e) => setTeam(e.target.value)}
                   required
                 >
-                  <option value="">--</option>
+                  <option value="" disabled selected>Choose a team</option>
                   <option value="Mars">Mars</option>
                   <option value="Wild">Wild</option>
                 </select>

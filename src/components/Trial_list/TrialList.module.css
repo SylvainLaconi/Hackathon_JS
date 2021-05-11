@@ -1,7 +1,7 @@
 .TrialList {
     background: url("../../assets/images/arene.jpg") no-repeat center center;
-      height: 100vh;
-  width: 100%;
+    height: 100vh;
+    width: 100%;
 }
 
 .MapList {
@@ -29,21 +29,3 @@
   color: white;
 
 }
-
-/*@media (min-width: 1200px) {
-    .TrialList {
-    grid-template-columns: repeat(6, 1fr);
-    }
-  }
-
-  @media (min-width: 801) and (max-width: 1199px) {
-    .TrialList {
-    grid-template-columns: repeat(4, 1fr);
-    }
-  }
-  
-  @media (min-width: 600px) and (max-width: 800px) {
-    .TrialList {
-    grid-template-columns: repeat(2, 1fr);
-    }
-  }*/
