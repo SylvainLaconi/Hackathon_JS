@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Footer } from "../Footer";
 import "./registration.css";
 import axios from "axios";
 

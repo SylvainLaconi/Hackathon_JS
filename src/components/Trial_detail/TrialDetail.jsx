@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { Footer } from "../Footer";
 import PlayerCard from "./PlayerCard.jsx";
 import styles from "./trialdetail.module.css";
 
@@ -98,7 +97,6 @@ const TrialDetail = () => {
               ))}
           </div>
         </div>
-        {/* <Footer /> */}
       </>
     );
   }
