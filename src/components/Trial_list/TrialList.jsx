@@ -11,11 +11,6 @@ export default function TrialList(){
             <Header />
             <div className={styles.TrialList}>
                 <TrialCard />
-                <TrialCard />
-                <TrialCard />
-                <TrialCard />
-                <TrialCard />
-                <TrialCard />
             </div>
             <Footer />
         </>
