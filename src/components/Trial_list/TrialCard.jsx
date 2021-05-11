@@ -1,18 +1,22 @@
-import React from "react";
-import styles from "./TrialCard.module.sass"
+import React from 'react'
+import styles from './TrialCard.module.sass'
 
-export default function TrialCard({title, place, image, description}) {
-
+export default function TrialCard({ title, place, image, description }) {
     return (
         <div className={styles.wrapper}>
             <div className={styles.card}>
-                <img src={image}/>
-                    <div className={styles.info}>
-                        <h1>{title}</h1>
-                        <h3>{place}</h3>
-                        <p>{description}</p>
-                        <button>Interested?</button>
-                    </div>
+                <img src={image} />
+                <div className={styles.title}>
+                    <h1>{title}</h1>
+                </div>
+                <div className={styles.info}>
+                   
+                    <h3>{place}</h3>
+                    <p>{description}</p>
+                    <button>Interested?</button>
+                    
+                </div>
+                
             </div>
         </div>
     )

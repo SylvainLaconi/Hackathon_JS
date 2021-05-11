@@ -1,33 +1,33 @@
 .header-ctn {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: var(--black);
-  height: 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--black);
+    height: 2rem;
 }
 
 .menu-ctn {
-  width: 20rem;
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
+    width: 20rem;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
 }
 
 .menu-ctn li {
-  justify-content: space-around;
-  margin-right: 1rem;
-  width: 5rem;
-  text-align: center;
+    justify-content: space-around;
+    margin-right: 1rem;
+    width: 5rem;
+    text-align: center;
 }
 
 .menu-ctn a {
-  color: var(--yellow);
-  text-decoration: none;
+    color: var(--yellow);
+    text-decoration: none;
 }
 
 .menu-ctn a:hover {
-  cursor: pointer;
-  text-decoration: underline;
+    cursor: pointer;
+    text-decoration: underline;
 }
