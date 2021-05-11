@@ -31,3 +31,7 @@
   cursor: pointer;
   text-decoration: underline;
 }
+
+.footer {
+  height: 100px;
+}
