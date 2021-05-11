@@ -1,5 +1,7 @@
 import React from "react";
 import './HomePage.css';
+import { Link } from 'react-router-dom'
+
 
 
 export function HomePage() {
@@ -7,12 +9,14 @@ export function HomePage() {
     return (
         <>
         <div className="HomePage">
-            {/* <img src='https://images8.alphacoders.com/374/374852.jpg' alt='mars' width='100%'/> */}
             <div className='title'>
                 <h1 className='tracking-in-expand'>Mars VS Wild</h1>
             </div>
             <div className='tracking'>
             <h2>Two teams, only one will succeed.<br />Their goal? Face one another in battles and become the ultimate winner.<br/> Who will it be?</h2>
+            </div>
+            <div className='start-button'>
+            <Link to='/trialcreation'>Trial Creation</Link>
             </div>
             <div id="background-wrap">
             <div class="bubble x1"></div>
