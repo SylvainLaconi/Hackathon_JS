@@ -1,7 +1,0 @@
-.TrialList {
-    background: url("../../Images/Image_ring.jpg") no-repeat center center;
-    height: 100vh;
-    width: 100%;
-    display: grid;
-    place-items: center;
-}
