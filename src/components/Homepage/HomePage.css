@@ -18,13 +18,35 @@
     font-size: x-large;
 }
 
-h2 {
+#home-description {
     color: white;
     text-align: center;
     padding: 4rem;
     font-size: 2rem;
     line-height: 1.5;
 }
+
+.start-btn {
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+}
+
+.play-btn {
+    cursor: pointer;
+    border-radius: 50%;
+    color: #FFFFFF;
+    font-size: 90px;
+    height: 150px;
+    width: 150px;
+    background-color: #cb6b41;
+    border: 1px;
+}
+
+.play-btn :hover {
+    opacity: 70%;
+}
+
 
 .tracking-in-expand {
 	-webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
@@ -94,7 +116,7 @@ h2 {
     }
   }
 
-/* Bubble animation */
+Bubble animation
   
   #background-wrap {
   bottom: 0;

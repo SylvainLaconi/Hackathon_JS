@@ -1,6 +1,7 @@
-import React from "react";
-import './HomePage.css';
+import './HomePage.css'
 import { Link } from 'react-router-dom'
+import { GiRobotAntennas } from 'react-icons/gi'
+
 
 
 
@@ -13,10 +14,12 @@ const HomePage = () => {
                 <h1 className='tracking-in-expand'>Mars VS Wild</h1>
             </div>
             <div className='tracking'>
-            <h2>Two teams, only one will succeed.<br />Their goal? Face one another in battles and become the ultimate winner.<br/> Who will it be?</h2>
+            <h2 id='home-description'>Two teams, only one will succeed.<br />Their goal? Face one another in battles and become the ultimate winner.<br/> Who will it be?</h2>
             </div>
-            <div className='start-button'>
-            <Link to='/trialcreation'>Trial Creation</Link>
+            <div className='start-btn'>
+            <Link to='/trialcreation'>
+                <button className='play-btn'><GiRobotAntennas /></button>
+            </Link>
             </div>
             <div id="background-wrap">
             <div class="bubble x1"></div>
