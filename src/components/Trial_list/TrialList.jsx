@@ -1,5 +1,5 @@
 import React from "react";
-import { Footer } from "../Footer";
+import Footer from "../Footer";
 import TrialDetail from "../Trial_detail/TrialDetail";
 
 const TrialList = () => {
