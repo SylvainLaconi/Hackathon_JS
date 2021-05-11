@@ -1,5 +1,4 @@
 import React from "react";
-import { Header } from "../Header"
 import { Footer } from "../Footer"
 import "./registration.css"
 
@@ -7,7 +6,6 @@ export const Registration = () => {
 
     return (
 <>
-  <Header />
     <div className="registration_background"> 
     <div className="regisSignupSection">
       <form action="#" method="POST" className="regisSignupForm" name="signupform">
