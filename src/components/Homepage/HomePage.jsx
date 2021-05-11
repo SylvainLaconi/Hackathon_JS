@@ -14,7 +14,7 @@ const HomePage = () => {
             <h2 id='home-description'>Two teams, only one will succeed.<br />Their goal? Face one another in battles and become the ultimate winner.<br/> Who will it be ?</h2>
             </div>
             <div className='start-btn'>
-            <Link to='/trialcreation'>
+            <Link to='/triallist'>
                 <button className='bounce-in-top' id='play-btn'><GiRobotAntennas /></button>
             </Link>
             </div>
