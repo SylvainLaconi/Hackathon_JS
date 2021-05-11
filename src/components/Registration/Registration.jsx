@@ -12,36 +12,28 @@ const Registration = () => {
   const [team, setTeam] = useState("");
   const [game, setGame] = useState("");
 
-  const newPlayer = axios
-    .post("/api/players", {
-      name: name,
-      species: species,
-      planet: planet,
-      photo: photo,
-      playerDescription: playerDescription,
-      team: team,
-      games_idgames: game,
-    })
-    .then((res) => console.log(res));
-
-  console.log(name);
-  console.log(species);
-  console.log(planet);
-  console.log(photo);
-  console.log(playerDescription);
-  console.log(team);
-  console.log(game);
+  const postPlayer = async () => {
+    const newPlayer = axios
+      .post("/api/players", {
+        name: name,
+        species: species,
+        planet: planet,
+        photo: photo,
+        playerDescription: playerDescription,
+        team: team,
+        games_idgames: game,
+      })
+      .then((res) => console.log(res));
+  };
 
   return (
     <>
       <div className="registration_background">
         <div className="regisSignupSection">
           <form
-            action="#"
-            method="POST"
             className="regisSignupForm"
             name="signupform"
-            onSubmit={newPlayer}
+            onSubmit={postPlayer}
           >
             <h2>Sign Up</h2>
             <ul className="regisNoBullet">
@@ -132,37 +124,27 @@ const Registration = () => {
                   <option value="7">Trial 7</option>
                 </select>
               </li>
-              <div className="registrationTeam" required>
-                <li>
-                  <input
-                    className="registrationRadio"
-                    type="radio"
-                    id="playerTeam"
-                    name="playerTeam"
-                    value="mars"
-                    required
-                  />
-                  <label for="playerTeam">Mars</label>
-                </li>
-                <li>
-                  <input
-                    type="radio"
-                    className="registrationRadio"
-                    id="playerTeam"
-                    name="playerTeam"
-                    value="wild"
-                    required
-                  />
-                  <label for="playerTeam">Wild</label>
-                </li>
-              </div>
-
-              <li id="center-btn">
+              <li>
+                <label for="registerTeam"></label>
+                <select
+                  className="regisTeam"
+                  name="registerTeam"
+                  id="registerTeam"
+                  value={team}
+                  onChange={(e) => setTeam(e.target.value)}
+                  required
+                >
+                  <option value="">--</option>
+                  <option value="Mars">Mars</option>
+                  <option value="Wild">Wild</option>
+                </select>
+              </li>
+              <li id="registerButton">
                 <input
                   type="submit"
                   id="regisJoinButton"
-                  name="join"
-                  alt="Join"
+                  name="joinTrial"
+                  alt="joinTrial"
                   value="Join"
                 />
               </li>
@@ -170,7 +152,6 @@ const Registration = () => {
           </form>
         </div>
       </div>
-      <Footer />
     </>
   );
 };
