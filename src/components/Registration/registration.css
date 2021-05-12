@@ -47,6 +47,7 @@
 
 .regisInputFields::placeholder {
     color: white;
+    font-family : 'Roboto', sans-serif;
 }
 
 .regisNoBullet {
