@@ -32,7 +32,9 @@ const TrialList = () => {
                 setTrials(gameToDelete)
             })
     };
-
+    function refreshPage() {
+        window.location.reload();
+    }
 
     if (loading) return <div>Loading...</div>
 
@@ -53,7 +55,7 @@ const TrialList = () => {
                                             description={trial.description}
                                             id={trial.idgames}
                                         />
-                                        <button className={styles.buttonRemove} onClick={() => deleteRow(trial.idgames)}>Remove</button>
+                                        <button className={styles.buttonRemove} onClick={() => { refreshPage(); deleteRow(trial.idgames) }}>Remove</button>
                                     </div>
                                 )
                             })
