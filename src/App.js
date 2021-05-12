@@ -7,34 +7,38 @@ import TrialDetail from "./components/Trial_detail/TrialDetail";
 import Registration from "./components/Registration/Registration";
 
 function App() {
-  return (
-    <div className="App">
-      <Router>
-        <div className="header-ctn">
-          <nav>
-            <ul className="menu-ctn">
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/triallist">Our trials</Link>
-              </li>
-              <li>
-                <Link to="/registration">Register</Link>
-              </li>
-            </ul>
-          </nav>
+    return (
+        <div className="App">
+            <Router>
+                <div className="header-ctn">
+                    <nav>
+                        <ul className="menu-ctn">
+                            <li>
+                                <Link to="/">Home</Link>
+                            </li>
+                            <li>
+                                <Link to="/triallist">Our trials</Link>
+                            </li>
+                            <li>
+                                <Link to="/registration">Register</Link>
+                            </li>
+                            <li>
+                                <Link to="/trialcreation">New Trail</Link>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <Switch>
+                    <Route exact path="/" component={HomePage} />
+                    <Route path="/triallist" component={TrialList} />
+                    <Route path="/trialcreation" component={TrialCreation} />
+                    <Route path="/trialdetail/:id" component={TrialDetail} />
+                    <Route path="/registration" component={Registration} />
+                </Switch>
+            </Router>
         </div>
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/triallist" component={TrialList} />
-          <Route path="/trialcreation" component={TrialCreation} />
-          <Route path="/trialdetail/:id" component={TrialDetail} />
-          <Route path="/registration" component={Registration} />
-        </Switch>
-      </Router>
-    </div>
-  );
+
+    );
 }
 
-export default App;
+export default App

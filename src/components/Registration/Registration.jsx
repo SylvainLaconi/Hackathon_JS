@@ -1,110 +1,181 @@
-import React from "react";
-import { Footer } from "../Footer";
+import React, { useState, useEffect } from "react";
 import "./registration.css";
+import axios from "axios";
 
 const Registration = () => {
+  const [name, setName] = useState("");
+  const [species, setSpecies] = useState("");
+  const [planet, setPlanet] = useState("");
+  const [photo, setPhoto] = useState("");
+  const [playerDescription, setPlayerDescription] = useState("");
+  const [team, setTeam] = useState("");
+  const [game, setGame] = useState("");
+
+  const postPlayer = async () => {
+    const newPlayer = axios
+      .post("/api/players", {
+        name: name,
+        species: species,
+        planet: planet,
+        photo: photo,
+        player_description: playerDescription,
+        team: team,
+        games_idgames: game,
+      })
+      .then((res) => console.log(res));
+  };
 
 
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [error, setError] = useState(null)
+  const [fetchGame, setFetchGame] = useState([])
+
+
+  useEffect(() => {
+    fetch(`/api/games/`)
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          setIsLoaded(true)
+          setFetchGame(result)
+        },
+        (error) => {
+          setIsLoaded(true)
+          setError(error)
+        }
+      )
+  }, [])
+
+  if (error) {
+    return <div>Erreur : {error.message}</div>;
+  } else if (!isLoaded) {
+    return <div>Chargement...</div>;
+  } else {
     return (
-<>
-    <div className="registration_background"> 
-    <div className="regisSignupSection">
-      <form action="#" method="POST" className="regisSignupForm" name="signupform">
-        <h2 className="regisTitle">Sign Up</h2>
-        <ul className="regisNoBullet">
-          <li>
-            <label for="player"></label>
-            <input
-              type="text"
-              className="regisInputFields"
-              id="player"
-              name="player"
-              placeholder="Name"
-              required
-            />
-          </li>
-          <li>
-            <label for="species"></label>
-            <input
-              type="text"
-              className="regisInputFields"
-              id="species"
-              name="species"
-              placeholder="Species"
-              required
-            />
-          </li>
-          <li>
-            <label for="planet"></label>
-            <input
-              type="text"
-              className="regisInputFields"
-              id="planet"
-              name="planet"
-              placeholder="Planet" 
-              required
-            />
-          </li>
-          <li>
-            <label for="picture"></label>
-            <input
-              type="text"
-              className="regisInputFields"
-              id="picture"
-              name="picture"
-              placeholder="Picture url" 
-              required
-            />
-          </li>
-          <li>
-            <label for="description"></label>
-            <textarea
-              type="text"
-              className="regisInputFields"
-              id="description"
-              name="description"
-              placeholder="Description" 
-              maxLength="100"
-              cols="30"
-              rows="5"
-              required
-            />
-          </li>
-          <li>
-            <label for="registerTrial"></label>
-            <select name="registerTrial" id="registerTrial" required>
-                <option value="">--</option>
-                <option value="trial1">Trial 1</option>
-                <option value="trial2">Trial 2</option>
-                <option value="trial3">Trial 3</option>
-                <option value="trial4">Trial 4</option>
-            </select>
-          </li>
-        
-          <li>
-            <label for="registerTeam"></label>
-            <select className="regisTeam" name="registerTeam" id="registerTeam" required>
-                <option value="">--</option>
-                <option value="Mars">Mars</option>
-                <option value="Wild">Wild</option>
-            </select>
-          </li>
-          <li id="registerButton">
-            <input
-              type="submit"
-              id="regisJoinButton"
-              name="joinTrial"
-              alt="joinTrial"
-              value="Join"
-            />
-          </li>
-        </ul>
-        </form>
+      <>
+        <div className="registration_background">
+          <div className="regisSignupSection">
+            <form
+              className="regisSignupForm"
+              name="signupform"
+              onSubmit={postPlayer}
+            >
+              <h2 className="regisTitle">Join a trial</h2>
+              <ul className="regisNoBullet">
+                <li>
+                  <label htmlfor="player"></label>
+                  <input
+                    type="text"
+                    className="regisInputFields"
+                    id="player"
+                    name="player"
+                    placeholder="Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
+                </li>
+                <li>
+                  <label htmlfor="species"></label>
+                  <input
+                    type="text"
+                    className="regisInputFields"
+                    id="species"
+                    name="species"
+                    placeholder="Species"
+                    value={species}
+                    onChange={(e) => setSpecies(e.target.value)}
+                    required
+                  />
+                </li>
+                <li>
+                  <label htmlfor="planet"></label>
+                  <input
+                    type="text"
+                    className="regisInputFields"
+                    id="planet"
+                    name="planet"
+                    placeholder="Planet"
+                    value={planet}
+                    onChange={(e) => setPlanet(e.target.value)}
+                    required
+                  />
+                </li>
+                <li>
+                  <label htmlfor="picture"></label>
+                  <input
+                    type="text"
+                    className="regisInputFields"
+                    id="picture"
+                    name="picture"
+                    placeholder="Picture url"
+                    value={photo}
+                    onChange={(e) => setPhoto(e.target.value)}
+                    required
+                  />
+                </li>
+                <li>
+                  <label htmlfor="description"></label>
+                  <textarea
+                    type="text"
+                    className="regisInputFields"
+                    id="description"
+                    name="description"
+                    placeholder="Description"
+                    maxLength="100"
+                    cols="30"
+                    rows="5"
+                    value={playerDescription}
+                    onChange={(e) => setPlayerDescription(e.target.value)}
+                    required
+                  />
+                </li>
+                <li>
+                  <label htmlfor="picture"></label>
+                  <select
+                    name="circuit"
+                    id="circuit-select"
+                    value={game}
+                    onChange={(e) => setGame(e.target.value)}
+                    required
+                  >
+                    <option value="" disabled selected>Choose a trial</option>
+                    {fetchGame.map((game) =>
+                      <option key={game.idgames} value={game.idgames}>{game.title}</option>
+                    )}
+                  </select>
+                </li>
+                <li>
+                  <label htmlfor="registerTeam"></label>
+                  <select
+                    className="regisTeam"
+                    name="registerTeam"
+                    id="registerTeam"
+                    value={team}
+                    onChange={(e) => setTeam(e.target.value)}
+                    required
+                  >
+                    <option value="" disabled selected>Choose a team</option>
+                    <option value="Mars">Mars</option>
+                    <option value="Wild">Wild</option>
+                  </select>
+                </li>
+                <li id="registerButton">
+                  <input
+                    type="submit"
+                    id="regisJoinButton"
+                    name="joinTrial"
+                    alt="joinTrial"
+                    value="Join"
+                  />
+                </li>
+              </ul>
+            </form>
+          </div>
         </div>
-        </div>
-      <Footer />
-    </>
-  );
+      </>
+    );
+  }
 };
 
 export default Registration;
