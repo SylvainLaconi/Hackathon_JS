@@ -90,7 +90,6 @@ const TrialDetail = () => {
                         <Link to={"/registration"}>
                     <button className={styles.buttonTrialDetail}>Add player</button>
                     </Link>
-                    <button className={styles.buttonTrialDetail}>Delete challenge</button>
                     </div>
                     </div>
                     <div className={styles.BlockTeam}>
