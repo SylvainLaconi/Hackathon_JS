@@ -6,8 +6,11 @@ import { Link } from "react-router-dom";
 
 
 export default function TrialList() {
-    const [trials, setTrials] = useState([])
-    const [loading, setLoading] = useState(true)
+    const [trials, setTrials] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [readStatus, writeStatus] = useState("");
+
+
 
     useEffect(() => {
         const getTrials = async () => {
@@ -21,9 +24,19 @@ export default function TrialList() {
             }
         }
         getTrials()
-    }, [loading])
+    }, [loading]);
 
-    console.log(trials)
+    const deleteRow = async (id, e) => {
+        e.preventDefault();
+        try {
+            await axios.delete(`/api/games/${id}`);
+            writeStatus("Post successfully deleted");
+            setTimeout(() => writeStatus(""), 3000);
+        } catch (err) {
+            writeStatus("Post deletion failed");
+        }
+
+    };
 
     if (loading) return <div>Loading...</div>
 
@@ -35,14 +48,17 @@ export default function TrialList() {
                         (trials.length > 0) && (
                             trials.map((trial) => {
                                 return (
-                                    <TrialCard
-                                        key={trial.id}
-                                        title={trial.title}
-                                        place={trial.place}
-                                        image={trial.image}
-                                        description={trial.description}
-                                        id={trial.idgames}
-                                    />
+                                    <>
+                                        <TrialCard
+                                            key={trial.id}
+                                            title={trial.title}
+                                            place={trial.place}
+                                            image={trial.image}
+                                            description={trial.description}
+                                            id={trial.idgames}
+                                        />
+                                        <button className={styles.buttonTrialList} onClick={(e) => deleteRow(trial.idgames, e)}>Add challenge</button>
+                                    </>
                                 )
                             })
                         )
@@ -52,7 +68,7 @@ export default function TrialList() {
                     <button className={styles.buttonTrialList}>Add challenge</button>
                 </Link>
             </div>
-                
+
         </>
     )
 }
