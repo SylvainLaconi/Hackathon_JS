@@ -1,5 +1,6 @@
 .creation_background {
-    background: url('/src/assets/mars_registration.jpg') no-repeat center center;
+    background: url('/src/assets/mars_registration.jpg') no-repeat center center fixed;
+		background-size: cover;
     width: 100%;
     height: 100vh;
 }
