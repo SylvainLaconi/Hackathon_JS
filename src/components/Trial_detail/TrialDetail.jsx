@@ -80,8 +80,8 @@ const TrialDetail = () => {
                             src={gameDetail.image}
                             alt={gameDetail.place}
                         />
-                        <div className={styles.gamePlace}>Place for battle : <p>{gameDetail.place}</p></div>
-                        <div className={styles.gameDescription}>Description : <p>{gameDetail.description}</p></div>
+                        <div className={styles.gamePlace}>Place for battle : <span>{gameDetail.place}</span></div>
+                        <div className={styles.gameDescription}>Description : <span>{gameDetail.description}</span></div>
                     </div>
                     <div className={styles.BlockTeam}>
                         <div className={styles.wrapper}>

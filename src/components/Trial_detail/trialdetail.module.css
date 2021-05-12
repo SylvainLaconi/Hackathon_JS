@@ -7,39 +7,58 @@
     justify-content: space-around;
     align-items: center;
 }
-.col {
-    float: left;
-    width: 50%;
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
+.cardctn {
+    display: flex;
+    height: 100%;
+    box-shadow: 0px 2px 15px #ddd;
+    height: 180px;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-.bold {
+
+.cardctn:hover {
+    animation: zoominImageGame 1s forwards;
+    opacity: 1;
+}
+
+.picture {
+    width: 50%;
+    height: auto;
+    padding: 5px;
+    opacity: 0.9;
+}
+
+.infos {
+    width: 50%;
+    padding: 2px;
+}
+
+.playername {
     font-family: "FontStarWars2", Helvetica, Arial, sans-serif;
-    margin: 0;
+    text-align: center;
     font-weight: 700;
     color: var(--black);
+    margin: 0;
 }
-.row p {
-    font-size: 12px;
-    width: 150px;
+.infos p {
+    font-family: "FontStarWars2", Helvetica, Arial, sans-serif;
+    font-size: 14px;
     padding: 0;
     margin: 0;
-    font-weight: 600;
-    color: #a9a9a9;
-    color: white
+    color: var(--red);
+    text-align: justify;
 }
+
+.infos span {
+    color: var(--black);
+}
+
 .imgplayer {
-    border-radius: 80px;
-    width: 80px;
-    height: 80px;
-    margin-top: 10px;
-    margin-left: 35px;
-}
-.row h4 {
-    font-size: 14px;
-    width: 150px;
+    border-radius: 2px;
+    width: 100%;
+    height: 100%;
 }
 
 .wrapper {
@@ -47,27 +66,15 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width: 200px;
+    width: 300px;
     padding-top: 2rem;
     box-shadow: 0px 2px 15px rgb(0, 0, 0);
-}
-
-.row {
-    box-shadow: 0px 2px 15px #ddd;
-    width: 180px;
-    height: 180px;
-    margin: 5px 10px;
-    background: rgba(255, 255, 255, 0.5);
-    text-align: center;
-}
-.contactList {
-    margin-top: 5px;
 }
 
 .game {
     width: 600px;
     height: 600px;
-    border-radius: 10px;
+    border-radius: 2px;
     color: var(--black);
     text-align: center;
     background: rgba(255, 255, 255, 0.5);
@@ -75,21 +82,19 @@
 }
 .gameTitle {
     font-family: "FontStarWars2", Helvetica, Arial, sans-serif;
-    font-size: 25px;
+    font-size: 40px;
     color: var(--red);
-    padding: 10px
+    margin: 0;
 }
 .gameDescription {
     font-family: "FontStarWars2", Helvetica, Arial, sans-serif;
-}
-.gameDescription p {
-    font-family: 'Roboto', sans-serif;
+    color: var(--black);
+    margin: 1rem;
 }
 .gamePlace {
     font-family: "FontStarWars2", Helvetica, Arial, sans-serif;
-}
-.gamePlace p {
-    font-family: 'Roboto', sans-serif;
+    color: var(--black);
+    margin: 1rem;
 }
 
 @keyframes zoominImageGame {
@@ -97,22 +102,23 @@
         transform: scale(1,1);
     }
     100% {
-        transform: scale(1.5,1.5);
+        transform: scale(1.1,1.1);
     }
 }
 .imggame {
     width: 100%;
-    height: 10rem;
+    height: 15rem;
 }
-.imggame:hover {
+.game:hover {
     animation: zoominImageGame 1s forwards;
-    border-radius: 10px;
+    border-radius: 2px;
 }
 
 .teamName {
     background-color: rgba(244, 165, 96, 0.5);
     font-family: "FontStarWars1", Helvetica, Arial, sans-serif;
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: 800;
     height: auto;
     width: 300px;
     margin: 0;
