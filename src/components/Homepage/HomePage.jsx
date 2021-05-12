@@ -38,7 +38,7 @@ const HomePage = () => {
                     <div class="bubble x10"></div>
                 </div>
             </div>
-        </> 
+        </>
     )
 }
 

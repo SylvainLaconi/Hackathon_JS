@@ -11,7 +11,7 @@
 }
 
 .title {
-    font-family: "FontStarWars1", Helvetica, Arial, sans-serif;
+    font-family: 'FontStarWars1', Helvetica, Arial, sans-serif;
     color: #cb6b41;
     text-align: center;
     margin-top: 5rem;
@@ -19,7 +19,7 @@
 }
 
 #home-description {
-    font-family: "FontStarWars2", Helvetica, Arial, sans-serif;
+    font-family: 'FontStarWars2', Helvetica, Arial, sans-serif;
     color: white;
     text-align: center;
     padding: 4rem;
@@ -525,14 +525,14 @@ Bubble animation #background-wrap {
     width: 180px;
 }
 @font-face {
-	font-family: "FontStarWars1";
-	src: url('../../assets/font/Starjhol.ttf');
+    font-family: 'FontStarWars1';
+    src: url('../../assets/font/Starjhol.ttf');
 }
 @font-face {
-	font-family: "FontStarWars2";
-	src: url('../../assets/font/Starjedi.ttf');
+    font-family: 'FontStarWars2';
+    src: url('../../assets/font/Starjedi.ttf');
 }
 @font-face {
-	font-family: "FontRebellion";
-	src: url('../../assets/font/Rebellion-oPoA.ttf');
+    font-family: 'FontRebellion';
+    src: url('../../assets/font/Rebellion-oPoA.ttf');
 }
