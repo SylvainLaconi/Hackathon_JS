@@ -16,8 +16,10 @@
     padding-left: 15px;
 }
 .bold {
-    margin-bottom: 5px;
-    margin-top: 5px;
+    font-family: "FontStarWars2", Helvetica, Arial, sans-serif;
+    margin: 0;
+    font-weight: 700;
+    color: var(--black);
 }
 .row p {
     font-size: 12px;
@@ -26,10 +28,12 @@
     margin: 0;
     font-weight: 600;
     color: #a9a9a9;
+    color: white
 }
 .imgplayer {
     border-radius: 80px;
     width: 80px;
+    height: 80px;
     margin-top: 10px;
     margin-left: 35px;
 }
@@ -38,18 +42,14 @@
     width: 150px;
 }
 
-.contactList .bold {
-    font-weight: 700;
-    color: #09384b;
-}
 .wrapper {
-    background-color: #fcfcfc8f;
+    background-color: rgba(244, 165, 96, 0.5);
     display: flex;
     flex-direction: column;
     height: 100vh;
     width: 200px;
     padding-top: 2rem;
-    box-shadow: 0px 2px 15px #ddd;
+    box-shadow: 0px 2px 15px rgb(0, 0, 0);
 }
 
 .row {
@@ -65,31 +65,64 @@
 }
 
 .game {
-    width: 400px;
-    height: 400px;
+    width: 600px;
+    height: 600px;
     border-radius: 10px;
-    background: var(--beige);
     color: var(--black);
     text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 2px 15px rgb(0, 0, 0);
+}
+.gameTitle {
+    font-family: "FontStarWars2", Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    color: var(--red);
+    padding: 10px
+}
+.gameDescription {
+    font-family: "FontStarWars2", Helvetica, Arial, sans-serif;
+}
+.gameDescription p {
+    font-family: 'Roboto', sans-serif;
+}
+.gamePlace {
+    font-family: "FontStarWars2", Helvetica, Arial, sans-serif;
+}
+.gamePlace p {
+    font-family: 'Roboto', sans-serif;
 }
 
+@keyframes zoominImageGame {
+    0% {
+        transform: scale(1,1);
+    }
+    100% {
+        transform: scale(1.5,1.5);
+    }
+}
 .imggame {
     width: 100%;
     height: 10rem;
 }
+.imggame:hover {
+    animation: zoominImageGame 1s forwards;
+    border-radius: 10px;
+}
+
 .teamName {
-    transform: rotate(-90deg);
-    height: 30px;
+    background-color: rgba(244, 165, 96, 0.5);
+    font-family: "FontStarWars1", Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    height: auto;
+    width: 300px;
     margin: 0;
+    text-align: center;
+    color: var(--red);
+    box-shadow: 0px 2px 15px rgb(0, 0, 0);  
 }
-.teamName2 {
-    transform: rotate(90deg);
-    height: 30px;
-    margin: 0;
-}
+
 
 .BlockTeam {
     display: flex;
-    flex-direction: row;
     align-items: center;
 }

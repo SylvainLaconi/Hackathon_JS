@@ -74,14 +74,14 @@ const TrialDetail = () => {
                         </div>
                     </div>
                     <div className={styles.game}>
-                        <h3>{gameDetail.title}</h3>
+                        <h2 className={styles.gameTitle}>{gameDetail.title}</h2>
                         <img
                             className={styles.imggame}
                             src={gameDetail.image}
                             alt={gameDetail.place}
                         />
-                        <p>Place for battle : {gameDetail.place}</p>
-                        <p>Description : {gameDetail.description}</p>
+                        <div className={styles.gamePlace}>Place for battle : <p>{gameDetail.place}</p></div>
+                        <div className={styles.gameDescription}>Description : <p>{gameDetail.description}</p></div>
                     </div>
                     <div className={styles.BlockTeam}>
                         <div className={styles.wrapper}>
@@ -101,7 +101,7 @@ const TrialDetail = () => {
                                     </>
                                 ))}
                         </div>
-                        <div className={styles.teamName2}>
+                        <div className={styles.teamName}>
                             <h2>Team Mars</h2>
                         </div>
                     </div>
