@@ -4,9 +4,10 @@ import styles from './TrialList.module.css'
 import TrialCard from './TrialCard'
 import { Link } from 'react-router-dom'
 
-export default function TrialList() {
-    const [trials, setTrials] = useState([])
-    const [loading, setLoading] = useState(true)
+const TrialList = () => {
+    const [trials, setTrials] = useState([]);
+    const [loading, setLoading] = useState(true);
+
 
     useEffect(() => {
         const getTrials = async () => {
@@ -20,9 +21,18 @@ export default function TrialList() {
             }
         }
         getTrials()
-    }, [loading])
 
-    console.log(trials)
+    }, [loading]);
+
+
+    const deleteRow = (id) => {
+        axios.delete(`/api/games/${id}`)
+            .then(res => {
+                const gameToDelete = trials.filter((game) => id !== game.id)
+                setTrials(gameToDelete)
+            })
+    };
+
 
     if (loading) return <div>Loading...</div>
 
@@ -30,19 +40,25 @@ export default function TrialList() {
         <>
             <div className={styles.TrialList}>
                 <div className={styles.MapList}>
-                    {trials.length > 0 &&
-                        trials.map((trial) => {
-                            return (
-                                <TrialCard
-                                    key={trial.id}
-                                    title={trial.title}
-                                    place={trial.place}
-                                    image={trial.image}
-                                    description={trial.description}
-                                    id={trial.idgames}
-                                />
-                            )
-                        })}
+                    {
+                        (trials.length > 0) && (
+                            trials.map((trial) => {
+                                return (
+                                    <div>
+                                        <TrialCard
+                                            key={trial.id}
+                                            title={trial.title}
+                                            place={trial.place}
+                                            image={trial.image}
+                                            description={trial.description}
+                                            id={trial.idgames}
+                                        />
+                                        <button className={styles.buttonRemove} onClick={() => deleteRow(trial.idgames)}>Remove</button>
+                                    </div>
+                                )
+                            })
+                        )
+                    }
                 </div>
                 <Link to={'/trialcreation'}>
                     <button className={styles.buttonTrialList}>
@@ -52,4 +68,5 @@ export default function TrialList() {
             </div>
         </>
     )
-}
+};
+export default TrialList;
