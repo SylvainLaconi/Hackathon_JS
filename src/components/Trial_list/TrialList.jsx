@@ -51,9 +51,8 @@ export default function TrialList() {
                 <Link to={"/trialcreation"}>
                     <button className={styles.buttonTrialList}>Add challenge</button>
                 </Link>
-
             </div>
-
+                
         </>
     )
 }
