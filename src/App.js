@@ -11,7 +11,7 @@ function App() {
         <div className="App">
             <Router>
                 <div className="header-ctn">
-                    <div className="logo-app">mars vs wild</div>
+                    <div className="logo-app"></div>
                     <nav>
                         <ul className="menu-ctn">
                             <li>
