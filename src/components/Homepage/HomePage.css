@@ -42,7 +42,7 @@
     width: 150px;
     background-color: #cb6b41;
     border: 1px;
-    box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, 0.5) inset;
 }
 
 #play-btn :hover {
