@@ -45,8 +45,6 @@ const TrialDetail = () => {
             )
     }, [id])
 
-    console.log(gameDetail)
-
     if (error) {
         return <div>Erreur : {error.message}</div>;
     } else if (!isLoaded) {
@@ -55,20 +53,25 @@ const TrialDetail = () => {
         return (
             <>
                 <div className={styles.TrialDetail}>
-                    <div className={styles.wrapper}>
-                        {playerList
-                            .filter((player) => player.team === "Wild")
-                            .map((TeamWild) => (
-                                <>
-                                    <PlayerCard
-                                        name={TeamWild.name}
-                                        image={TeamWild.photo}
-                                        planet={TeamWild.planet}
-                                        species={TeamWild.species}
-                                        playerDescription={TeamWild.player_description}
-                                    />
-                                </>
-                            ))}
+                    <div className={styles.BlockTeam}>
+                        <div className={styles.teamName}>
+                            <h2>Team Wild</h2>
+                        </div>
+                        <div className={styles.wrapper}>
+                            {playerList
+                                .filter((player) => player.team === "Wild")
+                                .map((TeamWild) => (
+                                    <>
+                                        <PlayerCard
+                                            name={TeamWild.name}
+                                            image={TeamWild.photo}
+                                            planet={TeamWild.planet}
+                                            species={TeamWild.species}
+                                            playerDescription={TeamWild.player_description}
+                                        />
+                                    </>
+                                ))}
+                        </div>
                     </div>
                     <div className={styles.game}>
                         <h3>{gameDetail.title}</h3>
@@ -80,23 +83,27 @@ const TrialDetail = () => {
                         <p>Place for battle : {gameDetail.place}</p>
                         <p>Description : {gameDetail.description}</p>
                     </div>
-
-                    <div className={styles.wrapper}>
-                        {playerList
-                            .filter((player) => player.team === 'Mars')
-                            .map((TeamWild) => (
-                                <>
-                                    <PlayerCard
-                                        name={TeamWild.name}
-                                        image={TeamWild.photo}
-                                        planet={TeamWild.planet}
-                                        species={TeamWild.species}
-                                        playerDescription={
-                                            TeamWild.player_description
-                                        }
-                                    />
-                                </>
-                            ))}
+                    <div className={styles.BlockTeam}>
+                        <div className={styles.wrapper}>
+                            {playerList
+                                .filter((player) => player.team === 'Mars')
+                                .map((TeamWild) => (
+                                    <>
+                                        <PlayerCard
+                                            name={TeamWild.name}
+                                            image={TeamWild.photo}
+                                            planet={TeamWild.planet}
+                                            species={TeamWild.species}
+                                            playerDescription={
+                                                TeamWild.player_description
+                                            }
+                                        />
+                                    </>
+                                ))}
+                        </div>
+                        <div className={styles.teamName2}>
+                            <h2>Team Mars</h2>
+                        </div>
                     </div>
                 </div>
             </>

@@ -1,4 +1,6 @@
 .header-ctn {
+    font-family: "FontRebellion", Helvetica, Arial, sans-serif;
+    position: absolute;
     display: flex;
     width: 100%;
     justify-content: flex-end;
@@ -8,7 +10,7 @@
 }
 
 .menu-ctn {
-    width: 20rem;
+    width: auto;
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -17,8 +19,8 @@
 
 .menu-ctn li {
     justify-content: space-around;
-    margin-right: 1rem;
-    width: 5rem;
+    margin-right: 2rem;
+    width: auto;
     text-align: center;
 }
 

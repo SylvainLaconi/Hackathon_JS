@@ -22,6 +22,9 @@ function App() {
                             <li>
                                 <Link to="/registration">Register</Link>
                             </li>
+                            <li>
+                                <Link to="/trialcreation">New Trail</Link>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -35,7 +38,7 @@ function App() {
             </Router>
         </div>
 
-  );
+    );
 }
 
 export default App
