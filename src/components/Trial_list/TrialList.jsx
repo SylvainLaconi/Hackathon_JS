@@ -3,12 +3,10 @@ import axios from 'axios'
 import styles from './TrialList.module.css'
 import TrialCard from './TrialCard'
 import { Link } from 'react-router-dom'
-import { render } from '@testing-library/react'
 
 const TrialList = () => {
     const [trials, setTrials] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [readStatus, writeStatus] = useState("");
 
 
     useEffect(() => {
@@ -23,18 +21,18 @@ const TrialList = () => {
             }
         }
         getTrials()
+
     }, [loading]);
 
-    const deleteRow = async (id, e) => {
-        e.preventDefault();
-        try {
-            await axios.delete(`/api/games/${id}`);
-            writeStatus("Post successfully deleted");
-            setTimeout(() => writeStatus(""), 3000);
-        } catch (err) {
-            writeStatus("Post deletion failed");
-        }
+
+    const deleteRow = (id) => {
+        axios.delete(`/api/games/${id}`)
+            .then(res => {
+                const gameToDelete = trials.filter((game) => id !== game.id)
+                setTrials(gameToDelete)
+            })
     };
+
 
     if (loading) return <div>Loading...</div>
 
@@ -55,9 +53,7 @@ const TrialList = () => {
                                             description={trial.description}
                                             id={trial.idgames}
                                         />
-                                        <Link to="/trialcreation">
-                                            <button className={styles.buttonRemove} onClick={(e) => deleteRow(trial.idgames, e)}>Remove</button>
-                                        </Link>
+                                        <button className={styles.buttonRemove} onClick={() => deleteRow(trial.idgames)}>Remove</button>
                                     </div>
                                 )
                             })
