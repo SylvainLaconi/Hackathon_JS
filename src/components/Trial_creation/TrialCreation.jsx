@@ -8,15 +8,22 @@ const TrialCreation = () => {
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
 
-  const postGame = async () => {
-    const newGame = axios
-      .post("/api/games", {
-        title: title,
-        place: place,
-        image: image,
-        description: description,
-      })
-      .then((res) => console.log(res));
+  const postGame = async (e) => {
+    e.preventDefault();
+
+      try {
+        const newGame = await axios
+        .post("/api/games", {
+          title: title,
+          place: place,
+          image: image,
+          description: description,
+        })
+      } catch (error) {
+        alert("Creation failed !")
+      }
+    
+      alert(`${title} successfully created`);
   };
 
   return (
@@ -28,7 +35,7 @@ const TrialCreation = () => {
             name="signupform"
             onSubmit={postGame}
           >
-            <h2 className="creationTitle">Add a trial</h2>
+            <h2 className="creationTitle">Create new challenge</h2>
             <ul className="creationNoBullet">
               <li>
                 <label htmlfor="trialTitle"></label>
@@ -92,7 +99,7 @@ const TrialCreation = () => {
                   id="creationJoinButton"
                   name="createTrial"
                   alt="createTrial"
-                  value="Create a Trial"
+                  value="Create challenge"
                 />
               </li>
             </ul>

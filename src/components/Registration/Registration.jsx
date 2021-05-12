@@ -11,8 +11,11 @@ const Registration = () => {
   const [team, setTeam] = useState("");
   const [game, setGame] = useState("");
 
-  const postPlayer = async () => {
-    const newPlayer = axios
+  const postPlayer = async (e) => {
+    e.preventDefault();
+    
+    try {
+      const newPlayer = await axios
       .post("/api/players", {
         name: name,
         species: species,
@@ -22,7 +25,11 @@ const Registration = () => {
         team: team,
         games_idgames: game,
       })
-      .then((res) => console.log(res));
+    } catch (error) {
+      alert("Register failed !")
+    }
+    
+    alert(`${name} successfully registered`);
   };
 
 
@@ -60,7 +67,7 @@ const Registration = () => {
               name="signupform"
               onSubmit={postPlayer}
             >
-              <h2 className="regisTitle">Join a trial</h2>
+              <h2 className="regisTitle">Join a challenge</h2>
               <ul className="regisNoBullet">
                 <li>
                   <label htmlfor="player"></label>
@@ -139,7 +146,7 @@ const Registration = () => {
                     onChange={(e) => setGame(e.target.value)}
                     required
                   >
-                    <option value="" disabled selected>Choose a trial</option>
+                    <option value="" disabled selected>Choose a challenge</option>
                     {fetchGame.map((game) =>
                       <option key={game.idgames} value={game.idgames}>{game.title}</option>
                     )}

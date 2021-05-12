@@ -17,13 +17,13 @@ function App() {
                                 <Link to="/">Home</Link>
                             </li>
                             <li>
-                                <Link to="/triallist">Our trials</Link>
+                                <Link to="/triallist">Challenges</Link>
                             </li>
                             <li>
-                                <Link to="/registration">Register</Link>
+                                <Link to="/registration">New player</Link>
                             </li>
                             <li>
-                                <Link to="/trialcreation">New Trail</Link>
+                                <Link to="/trialcreation">New Challenge</Link>
                             </li>
                         </ul>
                     </nav>
