@@ -11,9 +11,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top: 4%;
+    margin-top: 2%;
     width: 40%;
-    height: 80%;
     text-align: center;
     display: flex;
     color: white;
@@ -22,9 +21,7 @@
 
 .regisSignupForm {
     width: 100%;
-    padding: 30px 0;
     background: rgba(223, 176, 146, 0.5);
-    /* background: rgba(180, 118, 85, .6); */
     transition: 0.2s;
 }
 .regisTitle {
@@ -47,6 +44,7 @@
 
 .regisInputFields::placeholder {
     color: white;
+    font-family : 'Roboto', sans-serif;
 }
 
 .regisNoBullet {
@@ -54,9 +52,28 @@
     padding: 0;
 }
 
-/* bouton radio */
+/* listes déroulantes */
 .regisTeam {
-    margin-top: 10px;
+  padding:5px;
+  border: none;
+  background: rgba(20, 20, 20, 0.25);
+  font-family : 'Roboto', sans-serif;
+  color: white;
+}
+
+.challenge-select {
+    padding:5px;
+    border: none;
+    background-color: rgba(20, 20, 20, 0.25);
+    font-family : 'Roboto', sans-serif; 
+    margin-bottom: 10px;
+    color: white;
+}
+
+.regis-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 /* bouton */

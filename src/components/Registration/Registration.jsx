@@ -137,9 +137,11 @@ const Registration = () => {
                     required
                   />
                 </li>
+                <div className='regis-row'>
                 <li>
                   <label htmlfor="picture"></label>
                   <select
+                  className='challenge-select'
                     name="circuit"
                     id="circuit-select"
                     value={game}
@@ -154,6 +156,7 @@ const Registration = () => {
                 </li>
                 <li>
                   <label htmlfor="registerTeam"></label>
+
                   <select
                     className="regisTeam"
                     name="registerTeam"
@@ -167,6 +170,7 @@ const Registration = () => {
                     <option value="Wild">Wild</option>
                   </select>
                 </li>
+                </div>
                 <li id="registerButton">
                   <input
                     type="submit"
