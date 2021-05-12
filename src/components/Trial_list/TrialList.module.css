@@ -10,10 +10,10 @@
     align-items: center;
 }
 .MapList {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem 3rem;
 }
 .buttonTrialList {
     opacity: 0.4;
