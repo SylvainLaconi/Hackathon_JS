@@ -1,6 +1,7 @@
 .registration_background {
-    background: url('/src/assets/mars_registration.jpg') no-repeat center center fixed;
-		background-size: cover;
+    background: url('/src/assets/mars_registration.jpg') no-repeat center center
+        fixed;
+    background-size: cover;
     width: 100%;
     height: 100vh;
 }
@@ -11,9 +12,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top: 4%;
+    margin-top: 2%;
     width: 40%;
-    height: 80%;
     text-align: center;
     display: flex;
     color: white;
@@ -22,14 +22,12 @@
 
 .regisSignupForm {
     width: 100%;
-    padding: 30px 0;
     background: rgba(223, 176, 146, 0.5);
-    /* background: rgba(180, 118, 85, .6); */
     transition: 0.2s;
 }
 .regisTitle {
     font-weight: 300;
-    font-family: "FontStarWars2", Helvetica, Arial, sans-serif;
+    font-family: 'FontStarWars2', Helvetica, Arial, sans-serif;
 }
 .regisInputFields {
     margin: 15px 0;
@@ -47,6 +45,7 @@
 
 .regisInputFields::placeholder {
     color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 .regisNoBullet {
@@ -54,14 +53,33 @@
     padding: 0;
 }
 
-/* bouton radio */
+/* listes déroulantes */
 .regisTeam {
-    margin-top: 10px;
+    padding: 5px;
+    border: none;
+    background: rgba(20, 20, 20, 0.25);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.challenge-select {
+    padding: 5px;
+    border: none;
+    background-color: rgba(20, 20, 20, 0.25);
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.regis-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 /* bouton */
 #regisJoinButton {
-    font-family: "FontRebellion", Helvetica, Arial, sans-serif;
+    font-family: 'FontRebellion', Helvetica, Arial, sans-serif;
     border: 1px solid rgba(98, 48, 35, 1);
     background: rgba(20, 20, 20, 0.6);
     font-size: 18px;

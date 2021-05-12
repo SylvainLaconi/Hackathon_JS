@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react"
-import axios from "axios"
-import styles from "./TrialList.module.css"
-import TrialCard from "./TrialCard"
-import { Link } from "react-router-dom";
-
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+import styles from './TrialList.module.css'
+import TrialCard from './TrialCard'
+import { Link } from 'react-router-dom'
 
 export default function TrialList() {
     const [trials, setTrials] = useState([]);
@@ -15,7 +14,7 @@ export default function TrialList() {
     useEffect(() => {
         const getTrials = async () => {
             try {
-                const trialsList = await axios.get("/api/games")
+                const trialsList = await axios.get('/api/games')
                 setTrials(trialsList.data)
             } catch (err) {
                 console.log(err)
@@ -64,11 +63,12 @@ export default function TrialList() {
                         )
                     }
                 </div>
-                <Link to={"/trialcreation"}>
-                    <button className={styles.buttonTrialList}>Add challenge</button>
+                <Link to={'/trialcreation'}>
+                    <button className={styles.buttonTrialList}>
+                        Add challenge
+                    </button>
                 </Link>
             </div>
-
         </>
     )
 }

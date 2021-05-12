@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useParams } from 'react-router'
 import PlayerCard from './PlayerCard.jsx'
 import styles from './trialdetail.module.css'
@@ -73,6 +74,7 @@ const TrialDetail = () => {
                                 ))}
                         </div>
                     </div>
+                    <div className={styles.container}>
                     <div className={styles.game}>
                         <h2 className={styles.gameTitle}>{gameDetail.title}</h2>
                         <img
@@ -82,6 +84,14 @@ const TrialDetail = () => {
                         />
                         <div className={styles.gamePlace}>Place for battle : <span>{gameDetail.place}</span></div>
                         <div className={styles.gameDescription}>Description : <span>{gameDetail.description}</span></div>
+                    </div>
+                    
+                        <div className={styles.TrialDetailbuttons}>
+                        <Link to={"/registration"}>
+                    <button className={styles.buttonTrialDetail}>Add player</button>
+                    </Link>
+                    <button className={styles.buttonTrialDetail}>Delete challenge</button>
+                    </div>
                     </div>
                     <div className={styles.BlockTeam}>
                         <div className={styles.wrapper}>

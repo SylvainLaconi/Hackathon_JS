@@ -15,7 +15,7 @@ const HomePage = () => {
                         <br />
                         Their goal? Face one another in battles and become the
                         ultimate winner.
-                        <br /> Who will it be ?
+                        <br /> Which one will it be ?
                     </h2>
                 </div>
                 <div className="start-btn">
