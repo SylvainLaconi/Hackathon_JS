@@ -3,12 +3,12 @@ import axios from 'axios'
 import styles from './TrialList.module.css'
 import TrialCard from './TrialCard'
 import { Link } from 'react-router-dom'
+import { render } from '@testing-library/react'
 
-export default function TrialList() {
+const TrialList = () => {
     const [trials, setTrials] = useState([]);
     const [loading, setLoading] = useState(true);
     const [readStatus, writeStatus] = useState("");
-
 
 
     useEffect(() => {
@@ -34,7 +34,6 @@ export default function TrialList() {
         } catch (err) {
             writeStatus("Post deletion failed");
         }
-
     };
 
     if (loading) return <div>Loading...</div>
@@ -47,7 +46,7 @@ export default function TrialList() {
                         (trials.length > 0) && (
                             trials.map((trial) => {
                                 return (
-                                    <>
+                                    <div>
                                         <TrialCard
                                             key={trial.id}
                                             title={trial.title}
@@ -56,8 +55,10 @@ export default function TrialList() {
                                             description={trial.description}
                                             id={trial.idgames}
                                         />
-                                        <button className={styles.buttonTrialList} onClick={(e) => deleteRow(trial.idgames, e)}>Add challenge</button>
-                                    </>
+                                        <Link to="/trialcreation">
+                                            <button className={styles.buttonRemove} onClick={(e) => deleteRow(trial.idgames, e)}>Remove</button>
+                                        </Link>
+                                    </div>
                                 )
                             })
                         )
@@ -71,4 +72,5 @@ export default function TrialList() {
             </div>
         </>
     )
-}
+};
+export default TrialList;
