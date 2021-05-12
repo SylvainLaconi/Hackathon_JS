@@ -48,16 +48,16 @@ const TrialDetail = () => {
     console.log(gameDetail)
 
     if (error) {
-        return <div>Erreur : {error.message}</div>
+        return <div>Erreur : {error.message}</div>;
     } else if (!isLoaded) {
-        return <div>Chargement...</div>
+        return <div>Chargement...</div>;
     } else {
         return (
             <>
                 <div className={styles.TrialDetail}>
                     <div className={styles.wrapper}>
                         {playerList
-                            .filter((player) => player.team === 'team wild')
+                            .filter((player) => player.team === "Wild")
                             .map((TeamWild) => (
                                 <>
                                     <PlayerCard
@@ -65,9 +65,7 @@ const TrialDetail = () => {
                                         image={TeamWild.photo}
                                         planet={TeamWild.planet}
                                         species={TeamWild.species}
-                                        playerDescription={
-                                            TeamWild.player_description
-                                        }
+                                        playerDescription={TeamWild.player_description}
                                     />
                                 </>
                             ))}

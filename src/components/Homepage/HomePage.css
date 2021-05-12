@@ -234,7 +234,7 @@ Bubble animation #background-wrap {
 
 @-webkit-keyframes animateBubble {
     0% {
-        margin-top: 1000px;
+        margin-top: 0px;
     }
     100% {
         margin-top: -100%;
@@ -243,7 +243,7 @@ Bubble animation #background-wrap {
 
 @-moz-keyframes animateBubble {
     0% {
-        margin-top: 1000px;
+        margin-top: 0px;
     }
     100% {
         margin-top: -100%;
@@ -252,7 +252,7 @@ Bubble animation #background-wrap {
 
 @keyframes animateBubble {
     0% {
-        margin-top: 1000px;
+        margin-top: 0px;
     }
     100% {
         margin-top: -100%;
