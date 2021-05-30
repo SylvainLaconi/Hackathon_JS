@@ -1,0 +1,83 @@
+*
+	box-sizing: border-box
+
+.wrapper
+	display: flex
+	width: auto
+	justify-content: space-around
+	padding-bottom: 30px
+
+.card
+	width: 280px
+	height: 360px
+	text-align: center
+	background: white
+	position: relative
+	display: flex
+	flex-direction: column
+	transition: 0.4s ease-out
+	box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, 0.5);
+	&:hover
+		transform: translateY(20px)
+		&:before
+			opacity: 1
+		.info
+			opacity: 1
+			transform: translateY(0px)
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		display: block
+		width: 100%
+		height: 100%
+		background: rgba(black, 0.6)
+		z-index: 3
+		transition: 0.5s
+		opacity: 0
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+		position: absolute
+		top: 0
+		left: 0
+
+	.title
+		height: 200px
+		padding-left: 1.5px
+		text-align: center
+		margin: 0
+		z-index: 5
+		color: white
+		font-family: "FontStarWars1", Helvetica, Arial, sans-serif;
+	
+	.info
+		font-family: "FontStarWars2", Helvetica, Arial, sans-serif;
+		width: 100%
+		z-index: 3
+		color: white
+		opacity: 0
+		transform: translateY(10px)
+		transition: 0.5s
+		p
+			letter-spacing: 1px
+			font-size: 15px
+			margin-top: 8px
+		button
+			padding: 0.6rem
+			outline: none
+			border: none
+			border-radius: 3px
+			background: black
+			color: white
+			font-weight: bold
+			cursor: pointer
+			transition: 0.4s ease
+			&:hover
+				background: lighten(black, 10%)
+				color: white
+
+	
+	

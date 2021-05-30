@@ -1,0 +1,42 @@
+.header-ctn {
+    font-family: 'FontRebellion', Helvetica, Arial, sans-serif;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black);
+    height: 2rem;
+}
+
+.logo-app {
+    font-family: "FontStarWars1";
+    font-size: x-large;
+    color: var(--yellow);
+    margin: 0 2rem;
+}
+
+.menu-ctn {
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.menu-ctn li {
+    justify-content: space-around;
+    margin-right: 2rem;
+    width: auto;
+    text-align: center;
+}
+
+.menu-ctn a {
+    color: var(--yellow);
+    text-decoration: none;
+}
+
+.menu-ctn a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

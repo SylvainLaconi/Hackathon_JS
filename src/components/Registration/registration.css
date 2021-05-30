@@ -1,0 +1,95 @@
+.registration_background {
+    background: url('/src/assets/mars_registration.jpg') no-repeat center center
+        fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.regisSignupSection {
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 2%;
+    width: 40%;
+    text-align: center;
+    display: flex;
+    color: white;
+    box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, 0.5);
+}
+
+.regisSignupForm {
+    width: 100%;
+    background: rgba(223, 176, 146, 0.5);
+    transition: 0.2s;
+}
+.regisTitle {
+    font-weight: 300;
+    font-family: 'FontStarWars2', Helvetica, Arial, sans-serif;
+}
+.regisInputFields {
+    margin: 15px 0;
+    font-size: 16px;
+    padding: 10px;
+    width: 250px;
+    border: 1px solid rgba(98, 48, 35, 1);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: rgba(20, 20, 20, 0.25);
+    color: white;
+    outline: none;
+}
+
+.regisInputFields::placeholder {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.regisNoBullet {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* listes déroulantes */
+.regisTeam {
+    padding: 5px;
+    border: none;
+    background: rgba(20, 20, 20, 0.25);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.challenge-select {
+    padding: 5px;
+    border: none;
+    background-color: rgba(20, 20, 20, 0.25);
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.regis-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* bouton */
+#regisJoinButton {
+    font-family: 'FontRebellion', Helvetica, Arial, sans-serif;
+    border: 1px solid rgba(98, 48, 35, 1);
+    background: rgba(20, 20, 20, 0.6);
+    font-size: 18px;
+    color: white;
+    margin-top: 20px;
+    padding: 10px 50px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+#regisJoinButton:hover {
+    background: rgba(20, 20, 20, 0.8);
+    padding: 10px 80px;
+}
